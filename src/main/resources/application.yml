@@ -1,0 +1,3 @@
+beforeLog: "before log city={}"
+
+afterLog: "after log city={}"
