@@ -53,8 +53,9 @@ public class LogAroundService {
         String cityArg = argFields[0];
         String[] fieldsArgs = cityArg.split("\\.");
         String getterMethod = getterMethod(fieldsArgs[0]);
-        Address a = (Address)e.getClass().getMethod(getterMethod).invoke(e);
-        String city = a.getCity();
+        Object a = e.getClass().getMethod(getterMethod).invoke(e);
+        String getterMethod2 = getterMethod(fieldsArgs[1]);
+        String city = (String)a.getClass().getMethod(getterMethod2).invoke(a);
         return new String[]{city};
     }
 
