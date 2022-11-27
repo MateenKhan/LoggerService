@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "988a382e-f20c-43eb-9c01-6a1df8bd4b7e",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3110536"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mateen\",\r\n    \"address\":{\r\n        \"city\":\"Hyderabad\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
