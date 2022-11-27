@@ -1,8 +1,7 @@
-package mak.service;
+package mak.logger.service;
 
-import mak.annotation.LogAround;
-import mak.model.Address;
-import mak.model.Employee;
+import mak.logger.annotation.LogAround;
+import mak.logger.model.Employee;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -24,7 +23,8 @@ public class LogAroundService {
     @Autowired
     Environment env;
 
-    @Around(value = "@annotation(mak.annotation.LogAround)")
+//    @Around(value = "@annotation(mak.annotation.LogAround)")
+    @Around("@annotation(mak.logger.annotation.LogAround)")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("***************************************");
         Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();

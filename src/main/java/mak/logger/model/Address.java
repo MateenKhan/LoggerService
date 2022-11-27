@@ -1,4 +1,4 @@
-package mak.model;
+package mak.logger.model;
 
 public class Address {
 
